@@ -16,7 +16,9 @@ Team project for Northeastern University's information retrieval course (Spring 
    - Multiplicative: BM25 × bias
    - Additive: BM25 + bias
    - Weighted: 0.6 × BM25 + 0.4 × bias
-4. **Transformer comparison:** a DistilBERT model (Hugging Face Transformers, PyTorch) is fine-tuned as a regression model that outputs the bias score directly.
+The ranking pipeline uses the logistic regression classifier for its bias scores: it is fast, accurate and easy to interpret.
+
+**Transformer experiment:** separately from the pipeline, the notebook also fine-tunes a DistilBERT model (Hugging Face Transformers, PyTorch) as a regression model that outputs a bias score directly, and tests it on example sentences.
 
 ## Dataset
 
